@@ -14,6 +14,13 @@ class ServiceSeeder extends Seeder
     public function run(): void
     {
         //
-        Service::factory()->count(10)->create();
+        Service::factory()->create([
+            'name' => 'Service 1',
+            'description' => 'Service 1 Description',
+            'content' => '["Service 1 Content", "Service 1 Content", "Service 1 Content"]',
+            'icon' => 'https://via.placeholder.com/200x200?text=Service+1',
+            'image' => 'https://via.placeholder.com/400x300?text=Service+1',
+            'slug' => 'service-1',
+        ]);
     }
 }

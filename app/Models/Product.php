@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -15,9 +16,25 @@ class Product extends Model
         'name',
         'description',
         'image',
-        'service_id',
-        'slug'
+        'services_id',
+        'slug',
+        'content'
     ];
+
+    protected $casts = [
+        'id' => 'string'
+    ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            if (empty($model->id)) {
+                $model->id = (string) Str::uuid();
+            }
+        });
+    }
 
     public function service()
     {

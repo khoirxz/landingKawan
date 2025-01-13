@@ -18,9 +18,10 @@ class ServiceFactory extends Factory
     {
         return [
             // Service
-            'id' => $this->faker->uuid,
+            'id' => $this->faker->unique()->uuid,
             'name' => $this->faker->word,
             'description' => $this->faker->sentence,
+            'content' => $this->faker->paragraph,
             'icon' => $this->faker->imageUrl(200, 200, 'service', true, 'Service'),
             'image' => $this->faker->imageUrl(400, 300, 'business', true, 'Service'),
             'slug' => $this->faker->slug,

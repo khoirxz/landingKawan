@@ -18,7 +18,7 @@ class ArticleFactory extends Factory
     {
         return [
             //
-            'id' => $this->faker->uuid,
+            'id' => $this->faker->unique()->uuid,
             'title' => $this->faker->sentence,
             'description' => $this->faker->sentence,
             'content' => $this->faker->paragraph,

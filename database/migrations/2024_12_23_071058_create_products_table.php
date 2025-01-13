@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description')->nullable();
             $table->string('image')->nullable();
+            $table->text('content')->nullable();
             $table->uuid('services_id');
             $table->foreign('services_id')->references('id')->on('services')->onDelete('cascade');
             $table->string('slug')->unique();

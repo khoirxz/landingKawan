@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name');
-            $table->string('description');
+            $table->string('name', 100);
+            $table->string('description', 255);
+            // ⚠️ the content will be array but string format
+            $table->string('content', 255);
             $table->string('icon');
             $table->string('image')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
