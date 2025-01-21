@@ -1,7 +1,7 @@
 
 import { Head, useForm, Link } from "@inertiajs/react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Label } from '@/Components/ui/label';
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";

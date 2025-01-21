@@ -14,7 +14,7 @@ import {
     BreadcrumbSeparator,
     BreadcrumbPage,
 } from "@/Components/ui/breadcrumb";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/Components/ui/separator";
 import { AppSidebar } from "@/Components/app-sidebar";
 
 export default function AdminLayout({

@@ -19,7 +19,7 @@ export default function SiteFooter({
                 <div className="max-w-screen-xl w-full container px-4 md:px-6 py-8 mx-auto gap-5 grid grid-cols-1 md:grid-cols-2">
                     <div>
                         <img
-                            src="/assets/logofull.png"
+                            src={`${route("landing")}/assets/logofull.png`}
                             alt="logo"
                             className="w-48 object-contain"
                         />
@@ -30,12 +30,12 @@ export default function SiteFooter({
                         <div className="flex mt-4 space-x-4">
                             <img
                                 alt="bpr"
-                                src="/assets/bpr.png"
+                                src={`${route("landing")}/assets/bpr.png`}
                                 className="w-16 h-16 md:w-16 md:h-16 object-contain"
                             />
                             <img
                                 alt="lps"
-                                src="/assets/lps.png"
+                                src={`${route("landing")}/assets/lps.png`}
                                 className="w-16 h-16 md:w-16 md:h-16 object-contain"
                             />
                         </div>

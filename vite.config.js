@@ -10,4 +10,5 @@ export default defineConfig({
         }),
         react(),
     ],
+    // base: "https://bprkawan.co.id/home/public/build/"
 });

@@ -3,7 +3,7 @@ import { Head, useForm, Link } from "@inertiajs/react";
 import { useEditor } from "@tiptap/react";
 
 import StarterKit from "@tiptap/starter-kit";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import { Label } from "@/Components/ui/label";
 import { Textarea } from "@/Components/ui/textarea";

@@ -10,7 +10,7 @@ import {
     CardTitle,
 } from "@/Components/ui/card";
 import { Badge } from "@/Components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { TitleText, SubtitleText } from "@/Components/typography";
 
@@ -20,9 +20,6 @@ import { teamProps } from "@/types/team";
 import { ArticleProps } from "@/types/article";
 import { bankProps } from "@/types/bank";
 
-import img1 from "@/Assets/assets1.jpg";
-import img2 from "@/Assets/assets2.jpg";
-import img3 from "@/Assets/assets3.jpg";
 import Layout from "@/Layouts/Layout";
 import SiteContact from "@/Components/site-contact";
 
@@ -79,7 +76,7 @@ export default function Landing({
                                     <CardHeader>
                                         <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#342C89]/10">
                                             <object
-                                                data={`http://127.0.0.1:8000/storage/${service.icon}`}
+                                                data={`${route('landing')}/storage/${service.icon}`}
                                                 type="image/svg+xml"
                                                 className="h-8 w-8 text-[#342C89]"
                                             >
@@ -161,7 +158,7 @@ export default function Landing({
                     <div>
                         <div>
                             <img
-                                src={img1}
+                                src={`${route('landing')}/assets/bg1.jpg`}
                                 alt="about"
                                 className="object-cover w-full h-[400px]"
                             />
@@ -174,7 +171,7 @@ export default function Landing({
                 <div className="grid grid-cols-1 md:grid-cols-2 container px-4 md:px-6 mx-auto">
                     <div className="relative h-[500px]">
                         <img
-                            src={img1}
+                            src={`${route('landing')}/assets/assets1.jpg`}
                             alt="aman dan nyaman"
                             className="brightness-50 absolute -z-10 object-cover w-full h-full"
                             loading="lazy"
@@ -210,7 +207,7 @@ export default function Landing({
                 <div className="grid grid-cols-1 md:grid-cols-2 container px-4 md:px-6 mx-auto">
                     <div className="relative h-[500px]">
                         <img
-                            src={img2}
+                            src={`${route('landing')}/assets/assets2.jpg`}
                             alt="Pickup Service"
                             className="brightness-50 absolute -z-10 object-cover w-full h-full"
                             loading="lazy"
@@ -228,7 +225,7 @@ export default function Landing({
                     </div>
                     <div className="relative h-[500px]">
                         <img
-                            src={img3}
+                            src={`${route('landing')}/assets/assets3.jpg`}
                             alt="aman dan nyaman"
                             className="brightness-50 absolute -z-10 object-cover w-full h-full"
                             loading="lazy"
@@ -261,7 +258,7 @@ export default function Landing({
                                     key={team.id}
                                 >
                                     <img
-                                        src={`http://127.0.0.1:8000/storage/${team.image}`}
+                                        src={`${route('landing')}/storage/${team.image}`}
                                         alt="about"
                                         className="object-cover rounded-full aspect-square w-40"
                                     />
@@ -297,7 +294,7 @@ export default function Landing({
                             articles.map((article) => (
                                 <div key={article.id}>
                                     <img
-                                        src={`http://127.0.0.1:8000/storage/${article.image}`}
+                                        src={`${route('landing')}/storage/${article.image}`}
                                         alt={article.title}
                                     />
                                     <div>

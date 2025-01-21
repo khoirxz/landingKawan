@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@inertiajs/react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -12,7 +12,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/Components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
 import { MobileNav } from "./mobile-nav";
 
 import { servicesProps } from "@/types/services";
@@ -72,17 +72,17 @@ export function SiteHeader({
                         side="left"
                         className="w-screen sm:w-[540px] p-0"
                     >
-                        <MobileNav />
+                        <MobileNav services={services} />
                     </SheetContent>
                 </Sheet>
                 <Link href="/" className="mr-6 flex items-center space-x-2">
                     <img
-                        src="/assets/logo.png"
+                        src={`${route('landing')}/assets/logo.png`}
                         alt="logo"
                         className="w-8 h-8 object-contain md:hidden"
                     />
                     <img
-                        src="/assets/logofull.png"
+                        src={`${route('landing')}/assets/logofull.png`}
                         alt="logo"
                         className="w-28 object-contain hidden md:block"
                     />
@@ -158,11 +158,6 @@ export function SiteHeader({
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
-                <div className="flex flex-1 items-center justify-end space-x-4">
-                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                        Gabung sekarang
-                    </Button>
-                </div>
             </div>
         </header>
     );

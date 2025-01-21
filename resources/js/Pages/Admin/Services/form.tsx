@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Head, useForm, Link } from "@inertiajs/react";
 
 import { Plus, ImageUp, Trash } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
 import { Label } from "@/Components/ui/label";
 import { Textarea } from "@/Components/ui/textarea";
 

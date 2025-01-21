@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Separator } from "@/Components/ui/separator";
 import {
     FaWhatsapp,
@@ -11,7 +11,8 @@ import { bankProps } from "@/types/bank";
 
 export default function SiteContact({ banks }: { readonly banks: bankProps }) {
     return (
-        <section className="max-w-screen-xl w-full mx-auto py-10 md:py-16 relative bg-[url('/assets/contact.png')] bg-cover bg-center">
+        <section className={`max-w-screen-xl w-full mx-auto py-10 md:py-16 relative`}>
+            <img src={`${route('landing')}/assets/contact.png`} alt="bpr kawan contact" className="absolute inset-0 w-full h-full object-cover" />
             <div className="relative z-10 container px-4 md:px-6 mx-auto text-white flex flex-col md:flex-row gap-4">
                 <div className="mb-5 md:mb-0 flex-1">
                     <h1 className="text-4xl font-thin">Hubungi kami</h1>
